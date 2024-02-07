@@ -1,6 +1,6 @@
 import random
 
-def get_user_choice():
+def get_users_choice():
     while True:
         users_choice = input("Rock, Paper, or Scissors?: ").capitalize()
         if users_choice in ["Rock", "Paper", "Scissors"]:
@@ -23,22 +23,22 @@ def determine_winner(users_choice, computers_choice):
     else:
         return f"You lose, Better luck next time :( ! {computers_choice} beats {users_choice}."
 
-def main():
+def this():
     print("Welcome to Rock, Paper, Scissors!\n")
 
     while True:
-        users_choice = get_user_choice()
-        computer_choice = get_computers_choice()
+        users_choice = get_users_choice()
+        computers_choice = get_computers_choice()
 
-        print(f"\nYou chose: {users_choice}")
+        print(f"You chose: {users_choice}")
         print(f"Computer chose: {computer_choice}")
 
-        result = determine_winner(users_choice, computer_choice)
+        result = determine_winner(users_choice, computers_choice)
         print(result)
 
-        play_again = input("\nDo you want to play again? (yes/no): ").lower()
+        play_again = input("Do you want to play again? (yes/no): ").lower()
         if play_again != 'yes':
             print("See you later then!")
             break
 
-main()
+this()
